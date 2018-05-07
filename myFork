@@ -5,14 +5,15 @@
 #include <string.h>
 
 int main(){
+
     char option[1]; //THis defines the option variable
-    printf("Please choose an option. \n") //Asks the user what option they would like to use
+    printf("Please choose an option. \n"); //Asks the user what option they would like to use
     printf("1: ls \n"); //ls command
-    printf("1: who \n"); //who command
-    printf("1: ping \n"); //top command
+    printf("2: who \n"); //who command
+    printf("3: ping \n"); //top command
     scanf("%s", option); //saves the input to the option variable
 
-    if (strcmp(option,"1") == 0); //Compares the input to the option variable if the variable is 1 the if statement below is executed.
+    if (strcmp(option,"1") == 0) //Compares the input to the option variable if the variable is 1 the if statement below is executed.
     {
         pid_t pid;
         int currentStat = 0;
@@ -22,7 +23,7 @@ int main(){
         {
             wait(&currentStat);
             printf("I am the parent process and my PID is %d, my PPID is %d \n", getpid(), getppid());
-            printf("My child process is done. \n")
+            printf("My child process is done. \n");
         }
 
         else //This is for the child process
@@ -33,7 +34,7 @@ int main(){
         }
     }
 
-    else if (strcmp(option,"2") == 0); //Compares the input to the option variable if the variable is 2 the if statement below is executed.
+    else if (strcmp(option,"2") == 0) //Compares the input to the option variable if the variable is 2 the if statement below is executed.
     {
         pid_t pid;
         int currentStat = 0;
@@ -43,7 +44,7 @@ int main(){
         {
             wait(&currentStat);
             printf("I am the parent process and my PID is %d, my PPID is %d \n", getpid(), getppid());
-            printf("My child process is done. \n")
+            printf("My child process is done. \n");
         }
 
         else //This is for the child process
@@ -54,7 +55,7 @@ int main(){
         }
     }
 
-    else if (strcmp(option,"3") == 0); //Compares the input to the option variable if the variable is 3 the if statement below is executed.
+    else if (strcmp(option,"3") == 0) //Compares the input to the option variable if the variable is 3 the if statement below is executed.
     {
         pid_t pid;
         int currentStat = 0;
@@ -64,7 +65,7 @@ int main(){
         {
             wait(&currentStat);
             printf("I am the parent process and my PID is %d, my PPID is %d \n", getpid(), getppid());
-            printf("My child process is done. \n")
+            printf("My child process is done. \n");
         }
 
         else //This is for the child process
