@@ -116,13 +116,7 @@ if (strcmp(choice,"1") == 0)//Compares the input string with the variable     ch
                 printf( "Can you read this ?\n " ) ;
             }
 
-
-
-
-
     }
 
-
-
-
     return 0;
+}
