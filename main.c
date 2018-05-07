@@ -1,0 +1,128 @@
+
+    //fork and execl code to overcome problem of getting stuck in child process by using wait()
+#include <unistd.h>
+#include <stdio.h>
+#include "sys/types.h"
+#include <sys/wait.h>
+
+int main(){
+
+
+
+
+    char choice[1]; // Definition of the variable choice
+    printf("What command do you want to run ? :\n"); //Ask the user what    command they want to run
+    printf("1: ls \n");// Selects the Ls command
+    printf("2: who \n");// Selects the who command
+    printf("3: top \n");// Selects the top command
+    printf("4: ping \n");// Selects the top command
+     scanf("%s", choice);// assigns input to variable 'choice'
+
+
+if (strcmp(choice,"1") == 0)//Compares the input string with the variable     choice, and if the choice variable is 1 the following code is executed
+    {
+        pid_t pid;
+           int status = 0;
+            int i;
+            pid= fork(); // Forks the selected Process
+            if(pid!=0) //For Parent Process
+        {
+                    wait(&status);
+                    printf ( " I am the parent my PID is %d, myPPID is %d, \n   ",getpid(),getppid());
+                    printf( "Mychild process has finished. \n ");
+            }
+        else //For Child Process
+        {
+                printf ( " I am the child , my PID is %d , my PPID is %d \n",getpid(),getppid());
+                sleep(2);
+                execl ( "/bin/ls",".",(char*)0);
+                printf( "Can you read this ?\n " ) ;
+            }
+
+
+
+    }
+
+    else if (strcmp(choice,"2") == 0)//Compares the input string with the variable choice, and if the choice variable is 2 the following code is executed
+    {
+        pid_t pid;
+           int status = 0;
+            int i;
+            pid= fork();// Forks the selected Process
+            if(pid!=0) //For Parent Process
+        {
+                    wait(&status);
+                    printf ( " I am the parent my PID is %d, myPPID is %d, \n ",getpid(),getppid());
+                    printf( "Mychild process has finished. \n ");
+            }
+        else //For Child Process
+        {
+                printf ( " I am the child , my PID is %d , my PPID is %d \n",getpid(),getppid());
+                sleep(2);
+                execl ( "/bin/top",".",(char*)0);
+                printf( "Can you read this ?\n " ) ;
+            }
+
+
+
+
+
+    }
+
+    else if (strcmp(choice,"3") == 0) //Compares the input string with the variable choice, and if the choice variable is 3 the following code is executed
+    {
+        pid_t pid;
+           int status = 0;
+            int i;
+            pid= fork();// Forks the selected Process
+            if(pid!=0) //For Parent Process
+        {
+                    wait(&status);
+                    printf ( " I am the parent my PID is %d, myPPID is %d, \n ",getpid(),getppid());
+                    printf( "Mychild process has finished. \n ");
+            }
+        else //For Child Process
+        {
+                printf ( " I am the child , my PID is %d , my PPID is %d \n",getpid(),getppid());
+                sleep(2);
+                execl ( "/bin/top",".",(char*)0);
+                printf( "Can you read this ?\n " ) ;
+            }
+
+
+
+
+
+    }
+
+    // Executes Menu option to run Ping
+    else if (strcmp(choice,"4") == 0) //Compares the input string with the variable choice, and if the choice variable is 4 the following code is executed
+    {
+        pid_t pid;
+           int status = 0;
+            int i;
+            pid= fork();// Forks the selected Process
+            if(pid!=0) //For Parent Process
+        {
+                    wait(&status);
+                    printf ( " I am the parent my PID is %d, myPPID is %d, \n ",getpid(),getppid());
+                    printf( "Mychild process has finished. \n ");
+            }
+        else //For Child Process
+        {
+                printf ( " I am the child , my PID is %d , my PPID is %d \n",getpid(),getppid());
+                sleep(2);
+                execl ( "/bin/ping","ping","www.apple.com",(char*)0); //Runs ping to apple.com
+                printf( "Can you read this ?\n " ) ;
+            }
+
+
+
+
+
+    }
+
+
+
+
+    return 0;
