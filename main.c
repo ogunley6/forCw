@@ -3,41 +3,33 @@
 
 int main()
 {
-    printf("Him rendered may attended concerns jennings reserved now\n");
-    printf("Sympathize did now preference unpleasing mrs few. \n");
-    printf("Mrs for hour game room want are fond dare. For detract charmed add talking age. \n");
-    printf("Shy resolution instrument unreserved man few. \n");
-    printf("She did open find pain some out. If we landlord stanhill mr whatever pleasure supplied concerns so. \n");
+    printf("Increasing impression interested expression he my at. \n");
+    printf("Respect invited request charmed me warrant to. \n");
+    printf("Expect no pretty as do though so genius afraid cousin. \n");
+    printf("Justice visitor him entered for. \n");
+    printf("Continue delicate as unlocked entirely mr relation diverted in. \n");
+    printf("Known not end fully being style house. \n");
+    printf("An whom down kept lain name so at easy. \n");
     printf("\n");
 
-    printf("Him rendered may attended concerns jennings reserved now\n");
-    printf("Sympathize did now preference unpleasing mrs few. \n");
-    printf("Mrs for hour game room want are fond dare. For detract charmed add talking age. \n");
-    printf("Shy resolution instrument unreserved man few. \n");
-    printf("She did open find pain some out. If we landlord stanhill mr whatever pleasure supplied concerns so. \n");
+    printf("Increasing impression interested expression he my at. \n");
+    printf("Respect invited request charmed me warrant to. \n");
+    printf("Expect no pretty as do though so genius afraid cousin. \n");
+    printf("Justice visitor him entered for. \n");
+    printf("Continue delicate as unlocked entirely mr relation diverted in. \n");
+    printf("Known not end fully being style house. \n");
+    printf("An whom down kept lain name so at easy. \n");
     printf("\n");
 
-    printf("Him rendered may attended concerns jennings reserved now\n");
-    printf("Sympathize did now preference unpleasing mrs few. \n");
-    printf("Mrs for hour game room want are fond dare. For detract charmed add talking age. \n");
-    printf("Shy resolution instrument unreserved man few. \n");
-    printf("She did open find pain some out. If we landlord stanhill mr whatever pleasure supplied concerns so. \n");
+    printf("Increasing impression interested expression he my at. \n");
+    printf("Respect invited request charmed me warrant to. \n");
+    printf("Expect no pretty as do though so genius afraid cousin. \n");
+    printf("Justice visitor him entered for. \n");
+    printf("Continue delicate as unlocked entirely mr relation diverted in. \n");
+    printf("Known not end fully being style house. \n");
+    printf("An whom down kept lain name so at easy. \n");
     printf("\n");
 
-    printf("Him rendered may attended concerns jennings reserved now\n");
-    printf("Sympathize did now preference unpleasing mrs few. \n");
-    printf("Mrs for hour game room want are fond dare. For detract charmed add talking age. \n");
-    printf("Shy resolution instrument unreserved man few. \n");
-    printf("She did open find pain some out. If we landlord stanhill mr whatever pleasure supplied concerns so. \n");
-    printf("\n");
-
-    printf("Him rendered may attended concerns jennings reserved now\n");
-    printf("Sympathize did now preference unpleasing mrs few. \n");
-    printf("Mrs for hour game room want are fond dare. For detract charmed add talking age. \n");
-    printf("Shy resolution instrument unreserved man few. \n");
-    printf("She did open find pain some out. If we landlord stanhill mr whatever pleasure supplied concerns so. \n");
-    printf("\n");
 
     return 0;
-
 }
