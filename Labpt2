@@ -1,0 +1,53 @@
+//critical_example2.c
+#include <sys/ipc.h>
+#include <sys/sem.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+#include "se207_sems.h"
+
+int main(int argc, char argv[]){
+    //Use our source file as the "key"
+    int count = 0;
+    //Line 13 is an array that stores the whole song
+    const char *songLines[] = {"There's a hole in the bucket, dear Liza, dear Liza, \nThere's a hole in the bucket, dear Liza, a hole.","Then fix it, dear Henry, dear Henry, dear Henry, \nThen fix it, dear Henry, dear Henry, fix it.","With what shall I fix it, dear Liza, dear Liza? \nWith what shall I fix it, dear Liza, with what?","With straw, dear Henry, dear Henry, dear Henry, \nWith straw, dear Henry, dear Henry, with straw.","The straw is too long, dear Liza, dear Liza \nThe straw is too long, dear Liza, too long.","Then cut it, dear Henry, dear Henry, dear Henry \nThen cut it, dear Henry, dear Henry, cut it.","With what shall I cut it, dear Liza, dear Liza? \nWith what shall I cut it, dear Liza, with what?","With an axe, dear Henry, dear Henry, dear Henry \nWith an axe, dear Henry, dear Henry, an axe."};
+
+    int id=se207_semget("critical_example.c", 1);
+
+    FILE * henryFile; //pointer to the henryFile
+    FILE * lizaFile; //pointer to lizaFile
+
+    henryFile = fopen ("henryFile.txt", "w"); the henryFile is opened
+    lizaFile = fopen ("lizaFile.txt", "w"); the lizaFile is opened
+
+    int pid = fork(); //forks process
+    if (pid){
+        //Process 1
+        while(1){
+            se207_wait(id);
+            printf("%s \n", lines[count]); //prints the current item in the array
+            fprintf(henryFile, "%s\n", lines[count]); //prints to the henry File
+            count++; //increases the array count
+            rsleep();
+            se207_signal(id);
+        }
+    }
+
+    else //process 2
+    {
+        while(1){
+            se207_wait(id);
+            printf("%s \n", lines[count]); //prints the current item in the array
+            fprintf(lizaFile, "%s\n", lines[count]); //prints to the liza File
+            count++; //increases the array count
+            rsleep();
+            se207_signal(id);
+
+        }
+    }
+
+    fclose(henryFile); //closes the henry file
+    fclose(lizaFile); //closes the liza file
+
+}
+
